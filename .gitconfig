@@ -1,0 +1,23 @@
+[core]
+	excludesfile = /Users/adambutler/.gitignore_global
+
+[push]
+    default = current
+
+[pull]
+    default = current
+
+[color]
+    ui = auto
+    diff = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = Adam Butler
+	email = adam@littlebigmedia.co.uk
+[mergetool]
+	keepBackup = true
