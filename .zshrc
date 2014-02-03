@@ -83,6 +83,7 @@ alias chmodcheck='stat -f "%OLp"'
 alias ls='ls -la'
 alias o='open'
 alias o.='open .'
+alias mx='tmuxp load .'
 
 alias matrix'. ~/scripts/matrix.sh'
 
