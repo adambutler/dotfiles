@@ -1,12 +1,10 @@
 [core]
 	excludesfile = /Users/adambutler/.gitignore_global
-
+	editor = /usr/bin/vim
 [push]
-    default = current
-
+	default = current
 [pull]
-    default = current
-
+	default = current
 [color]
     ui = auto
     diff = true
@@ -21,3 +19,11 @@
 	email = adam@littlebigmedia.co.uk
 [mergetool]
 	keepBackup = true
+[filter "media"]
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
