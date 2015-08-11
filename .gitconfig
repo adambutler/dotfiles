@@ -16,7 +16,7 @@
 	trustExitCode = true
 [user]
 	name = Adam Butler
-	email = adam@littlebigmedia.co.uk
+	email = adam@lab.io
 [mergetool]
 	keepBackup = true
 [filter "media"]
