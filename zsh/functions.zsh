@@ -36,3 +36,8 @@ whatthefuckhaveibeenworkingon() {
 
   less -f ~/Sites/gitlog.tmp | sort -r | sed 's/\ \+0100//g' | more
 }
+
+t() {
+  DISABLE_AUTO_TITLE="true"
+  echo -ne "\e]1;$*\a"
+}
