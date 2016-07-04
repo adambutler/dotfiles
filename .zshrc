@@ -4,3 +4,4 @@
 . ~/.dotfiles/zsh/alias.zsh
 . ~/.dotfiles/zsh/functions.zsh
 . ~/.dotfiles/zsh/general.zsh
+. ~/.dotfiles/zsh/iterm.zsh
