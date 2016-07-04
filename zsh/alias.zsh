@@ -19,3 +19,4 @@ alias vc='coffee ~/Sites/node-launcher/server.coffee'
 alias psd='open -a /Applications/Adobe\ Photoshop\ CS5.1/Adobe\ Photoshop\ CS5.1.app'
 alias gh='github'
 alias rc='bundle exec rails console'
+alias dropitlikeitshot="ps xa | grep postgres: | grep $POSTGRESQL_DATABASE | grep -v grep | awk '{print (}' | sudo xargs kill)"
