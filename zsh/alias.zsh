@@ -8,7 +8,6 @@ eval ß=$sitesdir
 eval å=$sitesdir
 
 alias chmodcheck='stat -f "%OLp"'
-alias ls='gls --color=tty -la'
 alias o='open'
 alias o.='open .'
 alias mx='tmuxp load .'
@@ -20,3 +19,7 @@ alias vc='coffee ~/Sites/node-launcher/server.coffee'
 alias psd='open -a /Applications/Adobe\ Photoshop\ CS5.1/Adobe\ Photoshop\ CS5.1.app'
 alias s='subl'
 alias x='gitx'
+alias hl='pbpaste | highlight --syntax=js -O rtf | pbcopy'
+alias gs='git status'
+alias grm='git rm'
+alias grmc='git rm --cached'
