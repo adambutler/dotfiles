@@ -4,11 +4,17 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 ### Bundler Editor
 export BUNDLER_EDITOR=s
 
-eval "$(rbenv init -)"
+### RB Env
+eval "$(rbenv init --no-rehash -)"
+(rbenv rehash &) 2> /dev/null
+
 eval "$(/Users/adambutler/.simple/bin/simple init -)"
 
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+nvm() {
+  . "$(brew --prefix nvm)/nvm.sh"
+  nvm "$@"
+}
 
 ### Ansible
 if [[ -a ~/.vault_pass ]]; then
