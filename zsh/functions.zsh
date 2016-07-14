@@ -41,3 +41,13 @@ t() {
   DISABLE_AUTO_TITLE="true"
   echo -ne "\e]1;$*\a"
 }
+
+untilitworks() {
+  while true
+  do
+    $*
+    if [ $? -eq 0 ]; then
+      break
+    fi
+  done
+}
