@@ -1,0 +1,9 @@
+"*":
+  "exception-reporting":
+    userId: "fab577f9-e7f7-5723-42db-b413a48eba8e"
+  minimap:
+    plugins:
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+  welcome:
+    showOnStartup: false
