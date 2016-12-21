@@ -9290,7 +9290,7 @@
 	<key>NSColorPickerSlidersDefaults</key>
 	<string>1</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Downloads</string>
+	<string>~/Documents</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSNavPanelExpandedSizeForSaveMode</key>
@@ -9343,15 +9343,17 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>161 597 606 456 0 0 1920 1057 </string>
 	<key>NSWindow Frame SUAutomaticUpdateAlert</key>
-	<string>2332 665 616 174 1920 121 1440 900 </string>
+	<string>652 760 616 174 0 0 1920 1177 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>2570 516 620 392 1920 0 1920 1080 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>155 473 592 584 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2400 44 954 1013 1920 0 1920 1057 </string>
+	<string>395 213 650 452 0 0 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>960 44 954 1013 0 0 1920 1057 </string>
+	<string>1920 44 1914 1013 1920 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>960 41 954 1013 0 0 1920 1057 </string>
+	<string>4323 566 650 452 3840 121 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>0 28 954 1029 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
@@ -11113,6 +11115,8 @@
 	<false/>
 	<key>PasteFromClipboard</key>
 	<false/>
+	<key>PasteTabToStringTabStopSize</key>
+	<integer>4</integer>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -11171,13 +11175,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-07-07T13:00:23Z</date>
-	<key>SUSkippedVersion</key>
-	<string>2.0.0.20150412</string>
+	<date>2016-11-17T09:19:50Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
-	<true/>
+	<false/>
 	<key>Selection Respects Soft Boundaries</key>
 	<true/>
 	<key>Show Toolbelt</key>
@@ -13598,6 +13600,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.4</string>
+	<string>3.0.10</string>
 </dict>
 </plist>
