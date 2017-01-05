@@ -1,6 +1,28 @@
 "*":
+  core:
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".hgrc"
+        ".flowconfig"
+      ]
+      "source.json": [
+        ".arcconfig"
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
+    disabledPackages: [
+      "tree-view"
+      "linter"
+    ]
+    telemetryConsent: "no"
   "exception-reporting":
     userId: "fab577f9-e7f7-5723-42db-b413a48eba8e"
+  "git-plus":
+    general:
+      _analyticsUserId: "76b8c34a-9c31-4c42-a723-8c3be1777a6b"
   minimap:
     plugins:
       cursorline: true
