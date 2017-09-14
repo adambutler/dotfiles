@@ -5,8 +5,6 @@ export BUNDLER_EDITOR=s
 eval "$(rbenv init --no-rehash -)"
 (rbenv rehash &) 2> /dev/null
 
-eval "$(/Users/adambutler/.simple/bin/simple init -)"
-
 export NVM_DIR=~/.nvm
 nvm() {
   . "$(brew --prefix nvm)/nvm.sh"
