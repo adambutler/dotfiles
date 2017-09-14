@@ -1,5 +1,5 @@
 ### Bundler Editor
-export BUNDLER_EDITOR=s
+export BUNDLER_EDITOR=atom
 
 ### RB Env
 eval "$(rbenv init --no-rehash -)"
