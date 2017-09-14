@@ -1,0 +1,4 @@
+'atom-text-editor':
+  'cmd-shift--': 'rspec:run'
+  'cmd-shift-=': 'rspec:all'
+  'cmd-shift-+': 'rspec:all'
