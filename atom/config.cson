@@ -15,6 +15,7 @@
       ]
     disabledPackages: [
       "linter"
+      "wrap-guide"
       "tree-view"
     ]
     excludeVcsIgnoredPaths: false
@@ -30,7 +31,6 @@
     ]
     telemetryConsent: "no"
   editor:
-    autoIndent: false
     showInvisibles: true
     tabType: "soft"
   "exception-reporting":
@@ -45,5 +45,6 @@
   nuclide:
     "nuclide-home":
       showHome: false
+    use: {}
   welcome:
     showOnStartup: false

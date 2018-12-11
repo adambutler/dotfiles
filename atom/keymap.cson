@@ -2,3 +2,7 @@
   'cmd-shift--': 'rspec:run'
   'cmd-shift-=': 'rspec:all'
   'cmd-shift-+': 'rspec:all'
+'atom-workspace':
+  'cmd-ctrl-[': 'atom-keyboard-macros:start_kbd_macro'
+  'cmd-ctrl-]': 'atom-keyboard-macros:end_kbd_macro'
+  'cmd-ctrl-;': 'atom-keyboard-macros:call_last_kbd_macro'
