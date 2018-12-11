@@ -51,3 +51,49 @@ untilitworks() {
     fi
   done
 }
+
+transfer() { 
+    # check arguments
+    if [ $# -eq 0 ]; then 
+        echo "No arguments specified." >&2
+        echo "Usage:" >&2
+        echo "  transfer <file|directory>" >&2
+        echo "  ... | transfer <file_name>" >&2
+        return 1
+    fi
+    
+    # upload stdin or file
+    if tty -s; then 
+        file="$1"
+        if [ ! -e "$file" ]; then
+            echo "$file: No such file or directory" >&2
+            return 1
+        fi
+        
+        file_name=$(basename "$file" | sed -e 's/[^a-zA-Z0-9._-]/-/g') 
+        
+        # upload file or directory
+        if [ -d "$file" ]; then
+            # transfer directory
+            file_name="$file_name.zip" 
+            (cd "$file" && zip -r -q - .) | curl --progress-bar --upload-file "-" "https://transfer.sh/$file_name" | tee /dev/null
+        else 
+            # transfer file
+            cat "$file" | curl --progress-bar --upload-file "-" "https://transfer.sh/$file_name" | tee /dev/null
+        fi
+    else 
+        # transfer pipe
+        file_name=$1
+        curl --progress-bar --upload-file "-" "https://transfer.sh/$file_name" | tee /dev/null
+    fi
+}
+
+# checkout prev (older) revision
+git_rw() {
+    git checkout HEAD~
+}
+
+# checkout next (newer) commit
+git_ff() {
+    git checkout $(git rev-list --topo-order HEAD.."$*" | tail -1)
+}

@@ -1,5 +1,5 @@
 [core]
-	excludesfile = /Users/adambutler/.gitignore_global
+	excludesfile = /Users/adambutler/.gitignore
 	editor = /usr/bin/vim
 [push]
 	default = current
@@ -8,6 +8,8 @@
 [color]
     ui = auto
     diff = true
+[color "diff"]
+    whitespace = red reverse
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -24,7 +26,15 @@
 	smudge = git media smudge %f
 	required = true
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[diff]
+	tool = Kaleidoscope
+    wsErrorHighlight = all
+[alias]
+    ff = !git_ff
+    rw = !git_rw
