@@ -5,8 +5,11 @@ export BUNDLER_EDITOR=code
 eval "$(rbenv init --no-rehash -)"
 (rbenv rehash &) 2> /dev/null
 
-export NVM_DIR=~/.nvm
-. "/usr/local/opt/nvm/nvm.sh"
+### NVM
+### https://github.com/nvm-sh/nvm/issues/1978#issuecomment-452188689
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh" --no-use  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 
 ### Ansible
 if [[ -a ~/.vault_pass ]]; then
