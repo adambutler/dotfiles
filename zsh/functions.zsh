@@ -27,7 +27,7 @@ whothefuckisusingport() {
 
 # Restart the TouchBar when it becomes unresponsive (ControlStrip requires sudo)
 fuckyoutouchbar() {
-  sudo killallTouchBarServer
+  sudo killall TouchBarServer
   killall ControlStrip
 }
 
