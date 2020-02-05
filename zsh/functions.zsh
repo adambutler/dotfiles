@@ -7,10 +7,6 @@ feature() {
   hub pull-request -b master -h simpleweb:$* "$*"
 }
 
-whothefuckisusingport() {
-  lsof -i tcp:$*
-}
-
 fixpermissions() {
   read "continue?Are you sure?"
   if [[ "$continue" =~ ^[Yy]$ ]]
@@ -20,13 +16,29 @@ fixpermissions() {
   fi
 }
 
+# Check what process is using a specified port
+#
+# Usage:
+# whothefuckisusingport <PORT>
+#
+whothefuckisusingport() {
+  lsof -i tcp:$*
+}
+
+# Restart the TouchBar when it becomes unresponsive (ControlStrip requires sudo)
+fuckyoutouchbar() {
+  sudo killallTouchBarServer
+  killall ControlStrip
+}
+
+# List all commits across entire ~/Developer directory by datetime
 whatthefuckhaveibeenworkingon() {
-  LOG=~/Sites/gitlog.tmp
+  LOG=~/Developer/gitlog.tmp
 
   rm -f $LOG
   touch $LOG
 
-  for dir in ~/Sites/*; do
+  for dir in ~/Developer/*; do
     if [[ -d $dir ]] && [[ -d $dir/.git ]]
     then
       cd $dir;
@@ -52,36 +64,36 @@ untilitworks() {
   done
 }
 
-transfer() { 
+transfer() {
     # check arguments
-    if [ $# -eq 0 ]; then 
+    if [ $# -eq 0 ]; then
         echo "No arguments specified." >&2
         echo "Usage:" >&2
         echo "  transfer <file|directory>" >&2
         echo "  ... | transfer <file_name>" >&2
         return 1
     fi
-    
+
     # upload stdin or file
-    if tty -s; then 
+    if tty -s; then
         file="$1"
         if [ ! -e "$file" ]; then
             echo "$file: No such file or directory" >&2
             return 1
         fi
-        
-        file_name=$(basename "$file" | sed -e 's/[^a-zA-Z0-9._-]/-/g') 
-        
+
+        file_name=$(basename "$file" | sed -e 's/[^a-zA-Z0-9._-]/-/g')
+
         # upload file or directory
         if [ -d "$file" ]; then
             # transfer directory
-            file_name="$file_name.zip" 
+            file_name="$file_name.zip"
             (cd "$file" && zip -r -q - .) | curl --progress-bar --upload-file "-" "https://transfer.sh/$file_name" | tee /dev/null
-        else 
+        else
             # transfer file
             cat "$file" | curl --progress-bar --upload-file "-" "https://transfer.sh/$file_name" | tee /dev/null
         fi
-    else 
+    else
         # transfer pipe
         file_name=$1
         curl --progress-bar --upload-file "-" "https://transfer.sh/$file_name" | tee /dev/null
