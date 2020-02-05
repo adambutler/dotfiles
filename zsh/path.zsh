@@ -10,8 +10,11 @@ export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platforms
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
-## #rbenv
+### rbenv
 export PATH=$HOME/.rbenv/bin:$PATH
 
 ### Swift toolchain
 export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:"${PATH}"
+
+### rust (cargo installed binaries)
+export PATH=~${PATH}:~/.cargo/bin
