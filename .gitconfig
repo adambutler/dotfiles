@@ -38,3 +38,4 @@
 [alias]
     ff = !git_ff
     rw = !git_rw
+    rb = branch --sort=-committerdate
