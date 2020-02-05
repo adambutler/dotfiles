@@ -8,8 +8,7 @@ eval "$(rbenv init --no-rehash -)"
 ### NVM
 ### https://github.com/nvm-sh/nvm/issues/1978#issuecomment-452188689
 export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh" --no-use  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 ### Ansible
 if [[ -a ~/.vault_pass ]]; then
