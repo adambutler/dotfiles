@@ -23,7 +23,6 @@ alias hl='pbpaste | highlight --syntax=js -O rtf | pbcopy'
 alias gs='git status'
 alias grm='git rm'
 alias grmc='git rm --cached'
-alias gh='github'
 alias rc='bundle exec rails console'
 alias dropitlikeitshot="ps xa | grep postgres: | grep $POSTGRESQL_DATABASE | grep -v grep | awk '{print (}' | sudo xargs kill)"
 alias grhh='git reset HEAD --hard'
