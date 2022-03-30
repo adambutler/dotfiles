@@ -16,3 +16,4 @@ if [[ -a ~/.vault_pass ]]; then
 fi
 export ANSIBLE_HOST_KEY_CHECKING=False
 
+export HUSKY=0
